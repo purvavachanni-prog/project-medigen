@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"secondary-fixed-dim":"#bbcbb6","tertiary":"#4d3d66","tertiary-fixed-dim":"#d3beef","secondary-container":"#d4e4ce","on-primary-container":"#b2ddde","error-container":"#ffdad6","on-primary-fixed":"#002021","surface-container":"#edecff","on-surface":"#181a2e","primary":"#214b4c","on-tertiary":"#ffffff","surface-dim":"#d7d8f4","inverse-surface":"#2d2f44","on-surface-variant":"#404848","surface-container-high":"#e6e6ff","surface-container-lowest":"#ffffff","error":"#ba1a1a","surface-tint":"#3c6566","surface-variant":"#e0e0fc","on-secondary-fixed-variant":"#3c4b3a","on-secondary-container":"#586755","tertiary-fixed":"#ecdcff","surface":"#fbf8ff","on-tertiary-container":"#e2ccfe","on-error":"#ffffff","on-primary-fixed-variant":"#234d4e","surface-container-low":"#f4f2ff","surface-bright":"#fbf8ff","outline-variant":"#c0c8c8","primary-fixed-dim":"#a4cecf","background":"#fbf8ff","inverse-primary":"#a4cecf","primary-container":"#3a6364","on-secondary-fixed":"#111f11","primary-fixed":"#bfebeb","on-tertiary-fixed-variant":"#4f3f68","secondary":"#536251","on-error-container":"#93000a","on-primary":"#ffffff","on-secondary":"#ffffff","secondary-fixed":"#d7e7d1","outline":"#717978","inverse-on-surface":"#f1efff","on-tertiary-fixed":"#23133a","surface-container-highest":"#e0e0fc","on-background":"#181a2e","tertiary-container":"#65547f"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-xl":"2.5rem","space-xxl":"4rem","space-xs":"0.25rem","margin":"2.5rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","space-md":"1rem","gutter-mobile":"1rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Bodoni Moda"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Bodoni Moda"],"title-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Bodoni Moda"],"headline-lg":["Bodoni Moda"],"label-md":["Plus Jakarta Sans"],"headline-md":["Bodoni Moda"],"label-sm":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"600"}],"title-lg":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"title-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["0.8125rem",{"lineHeight":"1.125rem","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"0em","fontWeight":"500"}],"label-sm":["0.6875rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Project MEDIGEN Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCzq7IBJQq27A-keB08isJHGHz4VFhSN7nyi6XvO_ADvzPOtgrtiXu-VhI4m-LLcnLQC1vC2ph33lgXa_a5SxocC-cLxio70ipv2nc6LHLEcoBwYmfLmIZ2r5cncSlNtBWfx9r6jwx4mfJ8HTNqk7FzMLEZqfDeDzWt8LK51INkX4oe6NybSUaIgyZJnIXhBD2Ci-OjQ9RZyqXA2Y6ef4rcAazUfAF0gsibWHHM7ytabw"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">MEDIGEN</span><span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase mt-space-xs">Clinical Intelligence &amp; Diagnostic DSS</span></div></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-full shadow-[0_1px_4px_rgba(58,99,100,0.04)]"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="patient-portal" href="#">Patient Portal</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="clinical-decision-support" href="#">Doctor Decision Support</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="governance-compliance" href="#">Admin Governance</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="auth-access" href="#">Onboarding / Auth</a></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-space-xs bg-secondary-container/40 rounded-full text-secondary"><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm tracking-wide text-on-secondary-container font-semibold">+91 1800-MEDIGEN Helpline &amp; Verification Active</span></div><div class="flex items-center gap-space-sm pl-space-md"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-title-md text-on-surface leading-tight">Dr. Ananya Sharma, MD</span><div class="flex items-center justify-end gap-1"><span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Senior Radiologist</span><span class="text-[0.625rem] px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">AI Verified</span></div></div><div class="relative"><img alt="Profile" class="w-10 h-10 rounded-full object-cover shadow-[0_2px_8px_rgba(58,99,100,0.12)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsOuZVzzT6NQxz6WM7Ts6qyNeuvZ0aIlpGgVzch-661xaS9WTuYdfES77FkM9pxXcS4i17hjZ-mlbNq6LUID9F8hREcwCOP7hEKj3XkimaeUg3JTWKKPFvoFcDusNitVSO84ZGeMDf-VLUID81y2CCNq1sPnZJFBkOXlXs_kpV_7rZ9bpGh-EusfTRxdq2_6ySRmGS8Zss2e3FHHrACKWH_ZLidjuRsJj5wbyHH8N2"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface"></span></div></div></div></div><div class="h-7 w-full px-margin bg-surface-container-low flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="flex items-center gap-1 text-primary font-semibold"><span class="material-symbols-outlined text-[14px]">verified_user</span>DPDP Act Compliance Verified (Digital Personal Data Protection)</span><span class="text-outline-variant">|</span><span class="flex items-center gap-1 text-tertiary font-semibold"><span class="material-symbols-outlined text-[14px]">memory</span>Multimodal AI Engine v2.4 Online (Latency 42ms)</span></div><div class="flex items-center gap-space-sm font-label-sm text-label-sm text-secondary"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">cloud_done</span>FHIR R4 Sync Active</span></div></div></header><aside class="fixed left-0 top-27 h-[calc(100vh-6.75rem)] w-72 bg-surface-container-low z-40 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-space-md"><div class="px-space-md mb-space-md"><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Diagnostic Cockpit</span></div><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-[0_2px_6px_rgba(58,99,100,0.08)]"><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-xl transition-all gap-space-sm bg-primary-container text-on-primary-container font-bold shadow-[0_2px_6px_rgba(58,99,100,0.08)]" data-path="clinical-decision-support" href="#"><span class="material-symbols-outlined text-[20px]">clinical_notes</span><span class="font-title-md text-title-md">Decision Support</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="radiology-multimodal" href="#"><span class="material-symbols-outlined text-[20px]">radiology</span><span class="font-title-md text-title-md">Multimodal Vision</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="differential-engine" href="#"><span class="material-symbols-outlined text-[20px]">neurology</span><span class="font-title-md text-title-md">Differential Engine</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="patient-portal" href="#"><span class="material-symbols-outlined text-[20px]">vital_signs</span><span class="font-title-md text-title-md">Patient Records</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="prescriptions-pathology" href="#"><span class="material-symbols-outlined text-[20px]">medication</span><span class="font-title-md text-title-md">Rx &amp; Lab Analytics</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="governance-compliance" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span class="font-title-md text-title-md">Audit &amp; Governance</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_1px_4px_rgba(58,99,100,0.06)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Clinical Model</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Active</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">BioMistral + Med-PaLM-2 fine-tuned ensemble with 99.4% concordance.</p><div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[16px]">shield</span>ISO 27701 &amp; HIPAA Encrypted</div></div></div></aside><div class="pl-72"><main class="relative pt-27 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-margin py-space-md space-y-space-lg">
+<!-- TOP CONTEXT BAR: ACTIVE PATIENT DOSSIER & SUB-NAVIGATION -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(58,99,100,0.06)] p-space-md lg:p-space-lg flex flex-col gap-space-md">
+<!-- Top Row: Patient Vitals Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-title-lg shadow-sm">
+              RK
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight leading-tight">Rajesh Kumar</h1>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-semibold">54y · Male</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary tracking-wider font-mono">ABHA ID: 91-4829-1092-4819</p>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container hidden lg:block"></div>
+<!-- Vitals Snapshot Capsule Strip -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+<span class="font-label-sm text-label-sm"><strong class="font-semibold">BP</strong> 138/88</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">air</span>
+<span class="font-label-sm text-label-sm"><strong class="font-semibold">SpO₂</strong> 96%</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">favorite</span>
+<span class="font-label-sm text-label-sm"><strong class="font-semibold">HR</strong> 78 bpm</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">device_thermostat</span>
+<span class="font-label-sm text-label-sm"><strong class="font-semibold">Temp</strong> 98.4°F</span>
+</div>
+</div>
+<!-- Severe Allergy Tag -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-sm text-label-sm tracking-wide">Allergies: Penicillin, NSAIDs (Severe)</span>
+</div>
+</div>
+<!-- Priority Status & Case Identifier -->
+<div class="flex items-center gap-space-sm ml-auto">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm">
+<span class="h-2 w-2 rounded-full bg-error animate-pulse"></span>
+            High Priority · Under AI Review
+          </div>
+<button class="w-9 h-9 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high flex items-center justify-center transition-colors" title="Bookmark Dossier">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Bottom Row: Diagnostic Workbench Tabs -->
+<div class="flex items-center justify-between pt-space-xs overflow-x-auto">
+<div class="flex items-center gap-space-xs min-w-max">
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-primary-container text-on-primary font-bold shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+            Multimodal AI Workbench
+          </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+            DICOM Series (42 slices)
+          </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">show_chart</span>
+            Lab Trajectory
+          </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">history</span>
+            Previous Admissions
+          </button>
+</div>
+<div class="hidden xl:flex items-center gap-2 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+          Sync Token: #MED-8842-XC · Refreshed 12s ago
+        </div>
+</div>
+</div>
+<!-- MAIN 3-COLUMN CLINICAL GRID -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- ============================================================
+           LEFT COLUMN: PATIENT CONTEXT & MULTIMODAL RADIOLOGY VIEWER
+           ============================================================ -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Patient Queue Switcher -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_-2px_rgba(58,99,100,0.06)] p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Active Diagnostic Queue</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">3 Pending</span>
+</div>
+<div class="space-y-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between cursor-pointer transition-all hover:bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">RK</div>
+<div>
+<p class="font-title-md text-title-md leading-tight text-on-surface">Rajesh Kumar</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">54M · Chest Radiography &amp; Sputum</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low flex items-center justify-between cursor-pointer transition-all">
+<div class="flex items-center gap-space-sm opacity-80">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md font-bold">PN</div>
+<div>
+<p class="font-title-md text-title-md leading-tight text-on-surface">Priya Nair</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">38F · MRI Lumbar Spine (Post-op)</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary px-2 py-0.5 rounded-full bg-surface-container-high">Ready</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low flex items-center justify-between cursor-pointer transition-all">
+<div class="flex items-center gap-space-sm opacity-80">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md font-bold">AS</div>
+<div>
+<p class="font-title-md text-title-md leading-tight text-on-surface">Amitav Sen</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">67M · PET-CT Restaging Protocol</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary px-2 py-0.5 rounded-full bg-surface-container-high">Ingesting</span>
+</div>
+</div>
+</div>
+<!-- Radiography Multimodal Canvas Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_-2px_rgba(58,99,100,0.06)] overflow-hidden flex flex-col">
+<div class="p-space-md flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">radiology</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Chest X-Ray AP View (DICOM)</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Captured: 10:45 AM · 16-bit Grayscale</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold">AI Segmented</span>
+</div>
+<!-- Visual Canvas Container with Bounding Box Overlay -->
+<div class="relative bg-inverse-surface aspect-square overflow-hidden flex items-center justify-center group">
+<img class="w-full h-full object-cover" data-alt="High resolution chest radiograph AP view on black medical workstation monitor displaying thoracic cage, lung parenchymal fields with subtle soft cloudy consolidation in the right middle pulmonary zone, serene muted monochrome haute clinical ambiance, clinical imaging precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PTGME2AvJy9nbYW6WWyhUiOTMkSWMTzWdaWSoK-wM825p_apdcR2VA1_JHx4P7YrRqzXEUYr_vUmJLGv-T9F-MUQEvcwvXTW3o4gBPLBZPKGv8s4qPsXG-lrhqF0oJlHtxHtJIJZHsM-VWns-_jHOlQ8cHy3rhiUEom3KXstbPVr338LpWVAK5laWWpgEw_b5hnieDXS_Qj_6sf_s2WRMBSXSby0BczpviM3dUR1"/>
+<!-- Segmented ROI Bounding Overlay in Soft Peach/Coral with pulsing ping indicator -->
+<div class="absolute top-[42%] left-[48%] w-36 h-28 rounded-lg bg-error-container/20 pointer-events-none shadow-[0_0_24px_rgba(255,218,214,0.4)] flex flex-col justify-between p-2">
+<div class="flex items-center justify-between">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+<span class="font-label-sm text-label-sm font-mono text-error font-bold">ROI-01</span>
+</div>
+<div class="bg-surface-container-lowest/90 backdrop-blur-md p-1.5 rounded text-[10px] leading-tight text-on-surface shadow-md">
+<div class="font-bold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">biotech</span> 94.2% Conf
+                </div>
+<div class="text-on-surface-variant font-medium truncate">R Mid-Zone Infiltrate</div>
+</div>
+</div>
+<!-- Coordinate HUD Overlay -->
+<div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-inverse-surface/80 backdrop-blur font-mono text-[10px] text-inverse-on-surface">
+              kVp: 120 · mA: 320 · Exp: 12ms · Window: LUNG
+            </div>
+<div class="absolute bottom-2 right-2 px-2 py-1 rounded bg-inverse-surface/80 backdrop-blur font-mono text-[10px] text-secondary-fixed-dim">
+              Scale: 3.4 cm ROI span
+            </div>
+</div>
+<!-- Interactive Viewport Controls Bar -->
+<div class="p-space-sm bg-surface-container-low flex items-center justify-between flex-wrap gap-1">
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-xs flex items-center gap-1" title="Lung Window">
+<span class="material-symbols-outlined text-[14px]">tune</span> Lung
+              </button>
+<button class="px-2.5 py-1 rounded-full text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors" title="Bone Window">
+                Bone
+              </button>
+<button class="px-2.5 py-1 rounded-full text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors" title="Soft Tissue Window">
+                Soft
+              </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container" title="Zoom In 1.5x">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+<button class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container" title="Invert Grayscale">
+<span class="material-symbols-outlined text-[16px]">invert_colors</span>
+</button>
+<button class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-xs" title="Toggle AI Heatmap">
+<span class="material-symbols-outlined text-[16px]">heat_pump</span>
+</button>
+<button class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container" title="Caliper Ruler Tool">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Document OCR & NLP Extraction Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_-2px_rgba(58,99,100,0.06)] p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">document_scanner</span>
+<h3 class="font-title-md text-title-md text-on-surface">HRCT Thorax NLP Extraction</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">OCR Match: 99.1%</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg space-y-2">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">article</span> Radiologist Impression Extract (Apex Scan Center):
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed pl-3 bg-surface-container-lowest/60 py-1.5 rounded">
+              “Patchy ground glass opacity noted predominantly in the right middle lobe with subtle bronchial wall thickening. No pleural effusion. Heart size within normal limits.”
+            </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>Dr. M. K. Bhattacharya, DMRD</span>
+<span class="text-secondary font-medium">Verified Signed DICOM PDF</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
+           CENTER COLUMN: MULTIMODAL AI INSIGHTS, LABS & RISK TELEMETRY
+           ============================================================ -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Critical Drug Interaction Warning Box -->
+<div class="rounded-xl bg-error-container text-on-error-container p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-error mt-0.5" style="font-variation-settings: 'FILL' 1;">error</span>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-error">Nephrotoxicity Synergy Alert</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error text-on-error font-semibold">Level 1 Action</span>
+</div>
+<p class="font-body-md text-body-md font-semibold text-on-error-container">
+                Metformin (1000mg BD) &amp; Prescribed IV Contrast (Omnipaque 350)
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface leading-normal">
+                Patient Serum Creatinine is elevated (1.4 mg/dL). High risk of Contrast-Induced Nephropathy (CIN) and lactic acidosis.
+                <strong class="font-semibold block mt-1">AI Recommendation:</strong> Withhold Metformin 48h prior to contrast, initiate 0.9% Normal Saline pre-hydration at 100 mL/hr.
+              </p>
+</div>
+</div>
+</div>
+<!-- Medical Report Intelligence Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_-2px_rgba(58,99,100,0.06)] p-space-md lg:p-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Biomarker Synthesis</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Parsed Lab Parameters</h2>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_download</span> CSV Export
+            </button>
+</div>
+<div class="space-y-space-xs">
+<!-- Row 1: Hemoglobin -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">bloodtype</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface truncate">Hemoglobin (Hb)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Reference: 13.5 - 17.5 g/dL</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md font-mono font-bold text-on-surface">11.2 <span class="text-label-sm font-normal text-secondary">g/dL</span></span>
+<span class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm font-bold tracking-wide">
+                  Low
+                </span>
+</div>
+</div>
+<!-- Row 2: Total WBC Count -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">coronavirus</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface truncate">Total Leukocyte Count (WBC)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Reference: 4,000 - 11,000 /uL</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md font-mono font-bold text-error">14,800 <span class="text-label-sm font-normal text-secondary">/uL</span></span>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold tracking-wide">
+                  High
+                </span>
+</div>
+</div>
+<!-- Row 3: Serum Creatinine -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface truncate">Serum Creatinine</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Reference: 0.7 - 1.2 mg/dL</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md font-mono font-bold text-on-surface">1.4 <span class="text-label-sm font-normal text-secondary">mg/dL</span></span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold tracking-wide">
+                  Borderline
+                </span>
+</div>
+</div>
+<!-- Row 4: C-Reactive Protein (CRP) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface truncate">C-Reactive Protein (High Sensitivity)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Reference: &lt; 5.0 mg/L</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md font-mono font-bold text-error">48.0 <span class="text-label-sm font-normal text-secondary">mg/L</span></span>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold tracking-wide">
+                  Markedly High
+                </span>
+</div>
+</div>
+<!-- Row 5: D-Dimer -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface truncate">D-Dimer (FEU)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Reference: &lt; 0.50 ug/mL</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md font-mono font-bold text-primary">0.42 <span class="text-label-sm font-normal text-secondary">ug/mL</span></span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold tracking-wide">
+                  Normal
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Clinical History Correlation & Multi-day Sparkline -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_-2px_rgba(58,99,100,0.06)] p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Temporal Trajectory</span>
+<h3 class="font-title-md text-title-md text-on-surface">5-Day Symptom &amp; Marker Velocity</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="w-2.5 h-0.5 bg-primary"></span> CRP
+              </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="w-2.5 h-0.5 bg-secondary"></span> Temp
+              </span>
+</div>
+</div>
+<!-- Clean Inline SVG Trajectory Sparkline Graph -->
+<div class="w-full bg-surface-container-low p-space-sm rounded-lg">
+<svg class="w-full h-24 overflow-visible" fill="none" viewbox="0 0 380 90">
+<!-- Grid subtle guidelines -->
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="0" x2="380" y1="20" y2="20"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="0" x2="380" y1="50" y2="50"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1" x1="0" x2="380" y1="80" y2="80"></line>
+<!-- CRP Sparkline (Rapid ascent) -->
+<path class="text-primary" d="M 10 75 Q 90 70, 180 50 T 270 28 T 370 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<circle class="text-primary" cx="370" cy="12" fill="currentColor" r="4"></circle>
+<!-- Temperature Line (Fluctuating pyrexia) -->
+<path class="text-secondary" d="M 10 65 Q 95 40, 180 55 T 270 35 T 370 22" fill="none" stroke="currentColor" stroke-dasharray="3 3" stroke-linecap="round" stroke-width="2"></path>
+<circle class="text-secondary" cx="370" cy="22" fill="currentColor" r="3.5"></circle>
+<!-- Node markers on Days -->
+<text class="text-on-surface-variant font-mono" fill="currentColor" font-size="9" x="10" y="88">Day -4</text>
+<text class="text-on-surface-variant font-mono" fill="currentColor" font-size="9" x="95" y="88">Day -3</text>
+<text class="text-on-surface-variant font-mono" fill="currentColor" font-size="9" x="180" y="88">Day -2</text>
+<text class="text-on-surface-variant font-mono" fill="currentColor" font-size="9" x="270" y="88">Day -1</text>
+<text class="text-primary font-mono font-bold" fill="currentColor" font-size="9" x="350" y="88">Today</text>
+</svg>
+<div class="mt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-error">trending_up</span> Progressive Dyspnea Day 3 onward
+              </span>
+<span class="font-mono text-secondary">Concordance r=0.91</span>
+</div>
+</div>
+</div>
+<!-- Patient Risk Prediction Gauge -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_-2px_rgba(58,99,100,0.06)] p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Predictive Risk Stratification</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">Tier 3 Alert</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<!-- Circular Donut Visual for Risk Score (76/100) -->
+<div class="relative w-28 h-28 flex items-center justify-center shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="76, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-none">76</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">/ 100</span>
+</div>
+</div>
+<!-- Risk Vector Breakdown -->
+<div class="flex-1 space-y-space-xs">
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface font-semibold">Respiratory Compromise</span>
+<span class="font-mono font-bold text-error">68%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface font-semibold">Renal Functional Stress</span>
+<span class="font-mono font-bold text-on-surface">41%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 41%;"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface font-semibold">Sepsis Progression Risk</span>
+<span class="font-mono font-bold text-secondary">32%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim rounded-full" style="width: 32%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
+           RIGHT COLUMN: EXPLAINABLE AI REASONING & CLINICAL ACTIONS
+           ============================================================ -->
+<div class="xl:col-span-3 flex flex-col gap-space-lg">
+<!-- Regulatory Notice Compliance Card -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-start gap-space-xs shadow-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+<strong class="font-semibold text-primary">DPDP &amp; CDSCO AI Directive:</strong> Algorithmic conclusions serve as decision support only. Physician review and cryptographic signing required prior to EHR commit.
+          </p>
+</div>
+<!-- Evidence-Supported Diagnostic Possibilities -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_-2px_rgba(58,99,100,0.06)] p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Synthesized Differentials</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">3 Possibilities</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Differential #1: CAP -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-bold">Primary Candidate</span>
+<span class="font-title-md text-title-md font-mono font-bold text-primary">84%</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-tight">Community Acquired Pneumonia (CAP)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Right Middle Lobe focus · Guideline: IDSA/ATS 2019 Practice Protocol</p>
+<div class="mt-2 pt-2 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">auto_stories</span> Citations (4)</span>
+<span class="font-semibold text-primary">Inspect Evidence →</span>
+</div>
+</div>
+<!-- Differential #2: Atypical Pneumonitis -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-medium">Alternative</span>
+<span class="font-title-md text-title-md font-mono font-bold text-on-surface">46%</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-tight">Atypical Viral Pneumonitis</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Subtle GGO on CT · Disfavored by elevated pro-inflammatory WBC.</p>
+</div>
+<!-- Differential #3: PE (Rule Out) -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-medium">Ruled Out</span>
+<span class="font-title-md text-title-md font-mono font-bold text-secondary">&lt; 5%</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-tight">Pulmonary Thromboembolism</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">D-Dimer 0.42 ug/mL normal; Wells Score &lt; 2 (Low Probability).</p>
+</div>
+</div>
+</div>
+<!-- Explainable AI Step-by-Step Reasoning Tree -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_-2px_rgba(58,99,100,0.06)] p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">XAI Chain of Thought</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">account_tree</span>
+</div>
+<!-- Step Nodes -->
+<div class="relative pl-6 space-y-space-md before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container">
+<!-- Node 1 -->
+<div class="relative">
+<div class="absolute -left-[1.625rem] top-0.5 w-4 h-4 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-[9px] font-bold">1</div>
+<p class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Clinical Presentation</p>
+<p class="font-body-sm text-body-sm text-on-surface">Fever (98.4°F now, peak 102.1°F Day -2) + tachypnea and productive cough.</p>
+</div>
+<!-- Node 2 -->
+<div class="relative">
+<div class="absolute -left-[1.625rem] top-0.5 w-4 h-4 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-[9px] font-bold">2</div>
+<p class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Systemic Biomarkers</p>
+<p class="font-body-sm text-body-sm text-on-surface">Marked leukocytosis (14.8k) + CRP 48 mg/L confirms active acute bacterial cascade.</p>
+</div>
+<!-- Node 3 -->
+<div class="relative">
+<div class="absolute -left-[1.625rem] top-0.5 w-4 h-4 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-[9px] font-bold">3</div>
+<p class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Radiological Concurrence</p>
+<p class="font-body-sm text-body-sm text-on-surface">Segmental alveolar airspace consolidation in R mid zone aligns with lobar pathology.</p>
+</div>
+<!-- Node 4 -->
+<div class="relative">
+<div class="absolute -left-[1.625rem] top-0.5 w-4 h-4 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[9px] font-bold">✓</div>
+<p class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Ensemble Synthesis</p>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold">94% Concordance: Bacterial CAP; Ceftriaxone contra-indicated (Penicillin allergy).</p>
+</div>
+</div>
+</div>
+<!-- Doctor Final Action Control Deck -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_-4px_rgba(58,99,100,0.1)] p-space-md space-y-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold block mb-1">Attending Verification</span>
+<!-- Primary Confirmation Button -->
+<button class="w-full py-3 px-4 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-bold shadow-md transition-all flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">task_alt</span>
+            Approve AI Clinical Synthesis
+          </button>
+<!-- Secondary Edit Button -->
+<button class="w-full py-2.5 px-4 rounded-xl bg-transparent hover:bg-surface-container-low text-primary font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+            Modify Clinical Plan / Add Notes
+          </button>
+<!-- Export Signed Report -->
+<button class="w-full py-2.5 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">lock</span>
+            Export Certified Report (PDF / FHIR)
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-interaction script for controls -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Small feedback on approval click
+      const approveBtn = document.querySelector('button:has(.material-symbols-outlined:first-child)');
+      if (approveBtn) {
+        approveBtn.addEventListener('click', function() {
+          const originalText = this.innerHTML;
+          this.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> Submitting to FHIR R4 Store...';
+          setTimeout(() => {
+            this.innerHTML = '<span class="material-symbols-outlined text-[20px]">verified</span> Approved by Dr. Ananya Sharma';
+            this.classList.remove('bg-primary-container');
+            this.classList.add('bg-secondary');
+          }, 900);
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

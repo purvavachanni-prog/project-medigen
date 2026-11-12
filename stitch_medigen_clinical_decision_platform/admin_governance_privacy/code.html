@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"secondary-fixed-dim":"#bbcbb6","tertiary":"#4d3d66","tertiary-fixed-dim":"#d3beef","secondary-container":"#d4e4ce","on-primary-container":"#b2ddde","error-container":"#ffdad6","on-primary-fixed":"#002021","surface-container":"#edecff","on-surface":"#181a2e","primary":"#214b4c","on-tertiary":"#ffffff","surface-dim":"#d7d8f4","inverse-surface":"#2d2f44","on-surface-variant":"#404848","surface-container-high":"#e6e6ff","surface-container-lowest":"#ffffff","error":"#ba1a1a","surface-tint":"#3c6566","surface-variant":"#e0e0fc","on-secondary-fixed-variant":"#3c4b3a","on-secondary-container":"#586755","tertiary-fixed":"#ecdcff","surface":"#fbf8ff","on-tertiary-container":"#e2ccfe","on-error":"#ffffff","on-primary-fixed-variant":"#234d4e","surface-container-low":"#f4f2ff","surface-bright":"#fbf8ff","outline-variant":"#c0c8c8","primary-fixed-dim":"#a4cecf","background":"#fbf8ff","inverse-primary":"#a4cecf","primary-container":"#3a6364","on-secondary-fixed":"#111f11","primary-fixed":"#bfebeb","on-tertiary-fixed-variant":"#4f3f68","secondary":"#536251","on-error-container":"#93000a","on-primary":"#ffffff","on-secondary":"#ffffff","secondary-fixed":"#d7e7d1","outline":"#717978","inverse-on-surface":"#f1efff","on-tertiary-fixed":"#23133a","surface-container-highest":"#e0e0fc","on-background":"#181a2e","tertiary-container":"#65547f"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-xl":"2.5rem","space-xxl":"4rem","space-xs":"0.25rem","margin":"2.5rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","space-md":"1rem","gutter-mobile":"1rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Bodoni Moda"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Bodoni Moda"],"title-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Bodoni Moda"],"headline-lg":["Bodoni Moda"],"label-md":["Plus Jakarta Sans"],"headline-md":["Bodoni Moda"],"label-sm":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"600"}],"title-lg":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"title-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["0.8125rem",{"lineHeight":"1.125rem","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"0em","fontWeight":"500"}],"label-sm":["0.6875rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Project MEDIGEN Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCzq7IBJQq27A-keB08isJHGHz4VFhSN7nyi6XvO_ADvzPOtgrtiXu-VhI4m-LLcnLQC1vC2ph33lgXa_a5SxocC-cLxio70ipv2nc6LHLEcoBwYmfLmIZ2r5cncSlNtBWfx9r6jwx4mfJ8HTNqk7FzMLEZqfDeDzWt8LK51INkX4oe6NybSUaIgyZJnIXhBD2Ci-OjQ9RZyqXA2Y6ef4rcAazUfAF0gsibWHHM7ytabw"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">MEDIGEN</span><span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase mt-space-xs">Clinical Intelligence &amp; Diagnostic DSS</span></div></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-full shadow-[0_1px_4px_rgba(58,99,100,0.04)]"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="patient-portal" href="#">Patient Portal</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="clinical-decision-support" href="#">Doctor Decision Support</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="governance-compliance" href="#">Admin Governance</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="auth-access" href="#">Onboarding / Auth</a></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-space-xs bg-secondary-container/40 rounded-full text-secondary"><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm tracking-wide text-on-secondary-container font-semibold">+91 1800-MEDIGEN Helpline &amp; Verification Active</span></div><div class="flex items-center gap-space-sm pl-space-md"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-title-md text-on-surface leading-tight">Dr. Ananya Sharma, MD</span><div class="flex items-center justify-end gap-1"><span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Senior Radiologist</span><span class="text-[0.625rem] px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">AI Verified</span></div></div><div class="relative"><img alt="Profile" class="w-10 h-10 rounded-full object-cover shadow-[0_2px_8px_rgba(58,99,100,0.12)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsOuZVzzT6NQxz6WM7Ts6qyNeuvZ0aIlpGgVzch-661xaS9WTuYdfES77FkM9pxXcS4i17hjZ-mlbNq6LUID9F8hREcwCOP7hEKj3XkimaeUg3JTWKKPFvoFcDusNitVSO84ZGeMDf-VLUID81y2CCNq1sPnZJFBkOXlXs_kpV_7rZ9bpGh-EusfTRxdq2_6ySRmGS8Zss2e3FHHrACKWH_ZLidjuRsJj5wbyHH8N2"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface"></span></div></div></div></div><div class="h-7 w-full px-margin bg-surface-container-low flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="flex items-center gap-1 text-primary font-semibold"><span class="material-symbols-outlined text-[14px]">verified_user</span>DPDP Act Compliance Verified (Digital Personal Data Protection)</span><span class="text-outline-variant">|</span><span class="flex items-center gap-1 text-tertiary font-semibold"><span class="material-symbols-outlined text-[14px]">memory</span>Multimodal AI Engine v2.4 Online (Latency 42ms)</span></div><div class="flex items-center gap-space-sm font-label-sm text-label-sm text-secondary"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">cloud_done</span>FHIR R4 Sync Active</span></div></div></header><aside class="fixed left-0 top-27 h-[calc(100vh-6.75rem)] w-72 bg-surface-container-low z-40 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-space-md"><div class="px-space-md mb-space-md"><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Diagnostic Cockpit</span></div><nav class="space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-[0_2px_6px_rgba(58,99,100,0.08)]"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="clinical-decision-support" href="#"><span class="material-symbols-outlined text-[20px]">clinical_notes</span><span class="font-title-md text-title-md">Decision Support</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="radiology-multimodal" href="#"><span class="material-symbols-outlined text-[20px]">radiology</span><span class="font-title-md text-title-md">Multimodal Vision</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="differential-engine" href="#"><span class="material-symbols-outlined text-[20px]">neurology</span><span class="font-title-md text-title-md">Differential Engine</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="patient-portal" href="#"><span class="material-symbols-outlined text-[20px]">vital_signs</span><span class="font-title-md text-title-md">Patient Records</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all gap-space-sm" data-path="prescriptions-pathology" href="#"><span class="material-symbols-outlined text-[20px]">medication</span><span class="font-title-md text-title-md">Rx &amp; Lab Analytics</span></a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-xl transition-all gap-space-sm bg-primary-container text-on-primary-container font-bold shadow-[0_2px_6px_rgba(58,99,100,0.08)]" data-path="governance-compliance" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span class="font-title-md text-title-md">Audit &amp; Governance</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_1px_4px_rgba(58,99,100,0.06)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Clinical Model</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Active</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">BioMistral + Med-PaLM-2 fine-tuned ensemble with 99.4% concordance.</p><div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[16px]">shield</span>ISO 27701 &amp; HIPAA Encrypted</div></div></div></aside><div class="pl-72"><main class="relative pt-27 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Highlight / Breadcrumb & Executive Head -->
+<div class="px-margin py-space-md flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">DPDP Act (2023) &amp; CDSCO Clinical Safety Registry</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Ledger Instance: MED-IN-DELHI-09</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Governance, Consent &amp; System Observability</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Live Audit Node 04</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+        Export Immutable Ledger
+      </button>
+<button class="flex items-center gap-1.5 px-space-md py-space-xs rounded-full bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+        Sync NDHM Gateway
+      </button>
+</div>
+</div>
+<div class="px-margin pb-space-xxl space-y-space-xl">
+<!-- SECTION 1: EXECUTIVE KPI SUMMARY TILES -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">DPDP Compliance</span>
+<span class="p-1.5 rounded-full bg-secondary-container/60 text-secondary">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">99.8%</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +0.2%
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">AES-256 rest, TLS 1.3 transit, active ABHA tokens</p>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 99.8%"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Multimodal OCR</span>
+<span class="p-1.5 rounded-full bg-tertiary-fixed text-tertiary">
+<span class="material-symbols-outlined text-[18px]">document_scanner</span>
+</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">97.4%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Prescriptions</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">Evaluated across 14,200 handwritten reports</p>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 97.4%"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">RAG Retrieval Latency</span>
+<span class="p-1.5 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-semibold tracking-tight">142<span class="font-headline-md text-headline-md font-normal">ms</span></span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">-18ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">Pinecone / Milvus vector index lookup</p>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Sub-200ms Target Met
+        </div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Verified Clinicians</span>
+<span class="p-1.5 rounded-full bg-secondary-container/60 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">390</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">12 Hosp.</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">348 Physicians, 42 Radiologists onboarded</p>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">local_hospital</span> AI Credentialed
+        </div>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold">Pending Registrations</span>
+<span class="p-1.5 rounded-full bg-error-container text-error">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-error font-semibold tracking-tight">6</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Action Needed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">State Council verification queue</p>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-0.5 font-bold" href="#credential-management">
+          Review Audit Queue <span class="material-symbols-outlined text-[12px]">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- SECTION 3: MULTIMODAL AI MODEL HEALTH & PIPELINE MONITOR (Placed high for operational clarity) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-xs gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Cluster Health &amp; Neural Diagnostics</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Multimodal Clinical Inference Pipeline Monitor</h2>
+</div>
+<!-- Resource usage miniature meters -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-xs rounded-full">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">GPU Tensor Core Load:</span>
+<span class="font-title-md text-title-md text-primary font-bold">64%</span>
+<span class="w-16 bg-surface-container-high h-2 rounded-full overflow-hidden inline-block">
+<span class="bg-primary h-full block rounded-full" style="width: 64%"></span>
+</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Queue Latency:</span>
+<span class="font-title-md text-title-md text-tertiary font-bold">3 jobs</span>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Model Card 1 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">8/8 Workers Online</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Vision-OCR</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">OCR &amp; Text Extractor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Fine-tuned LayoutLMv3 + TrOCR for non-standard prescription forms.</p>
+</div>
+<div class="space-y-1.5 pt-space-xs bg-surface-container-lowest/60 p-2.5 rounded-lg">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Precision / Recall</span>
+<span class="text-primary font-bold">97.4% / 98.1%</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Avg Inference</span>
+<span class="text-secondary font-bold">84ms</span>
+</div>
+</div>
+</div>
+<!-- Model Card 2 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Active ResNet/ViT</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Segmentation</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Radiology Segmentation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">DenseNet-121 + Med-SAM for pulmonary consolidation &amp; cardiomegaly.</p>
+</div>
+<div class="space-y-1.5 pt-space-xs bg-surface-container-lowest/60 p-2.5 rounded-lg">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Dice Coeff (ROI)</span>
+<span class="text-primary font-bold">0.89 Index</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Slice Latency</span>
+<span class="text-secondary font-bold">380ms</span>
+</div>
+</div>
+</div>
+<!-- Model Card 3 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Quantized 4-bit</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Reasoning</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Differential Reasoner</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">BioMistral-7B Clinical Ensemble with hallucination suppression guardrails.</p>
+</div>
+<div class="space-y-1.5 pt-space-xs bg-surface-container-lowest/60 p-2.5 rounded-lg">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Hallucinations (500 cases)</span>
+<span class="text-secondary font-bold">0 Detected</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Perplexity Score</span>
+<span class="text-tertiary font-bold">2.18</span>
+</div>
+</div>
+</div>
+<!-- Model Card 4 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Deterministic</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Drug Safety</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">DDI &amp; Dosage Validator</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">CDSCO Schedule H/H1, US-FDA pharmacopeia &amp; renal clearance rules.</p>
+</div>
+<div class="space-y-1.5 pt-space-xs bg-surface-container-lowest/60 p-2.5 rounded-lg">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Safety Rules Coverage</span>
+<span class="text-primary font-bold">100% CDSCO</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Alert Trigger Latency</span>
+<span class="text-secondary font-bold">12ms</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: PATIENT PRIVACY AUDIT & ACCESS LOG TABLE -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Statutory Audit Logs</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Patient Record Access &amp; DPDP Consent Trail</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cryptographically signed access events recorded into the tamper-evident clinical ledger.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Filter Controls -->
+<div class="flex items-center bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-outline mr-1.5">calendar_today</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer">
+<option>Today (IST)</option>
+<option>Past 24 Hours</option>
+<option>Past 7 Days</option>
+<option>Custom Range...</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-outline mr-1.5">apartment</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer">
+<option>All Hospital Branches</option>
+<option>AIIMS New Delhi</option>
+<option>Fortis Healthcare (Gurugram)</option>
+<option>Apollo Indraprastha</option>
+<option>Manipal Hospital (Bengaluru)</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-outline mr-1.5">emergency</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer">
+<option>All Reasons</option>
+<option>Differential AI Review</option>
+<option>Emergency Overrule (ICU)</option>
+<option>Outpatient Consultation</option>
+<option>Radiology Peer Audit</option>
+</select>
+</div>
+<button class="p-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-all">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- High contrast Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-DEFAULT">Timestamp (IST)</th>
+<th class="py-3 px-4">Practitioner / Credential</th>
+<th class="py-3 px-4">Patient / ABHA Identifier</th>
+<th class="py-3 px-4">Clinical Access Reason</th>
+<th class="py-3 px-4">Consent Status</th>
+<th class="py-3 px-4">Compliance Integrity</th>
+<th class="py-3 px-4 text-right rounded-r-DEFAULT">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono font-medium text-on-surface">14:22:04 IST</td>
+<td class="py-3.5 px-4">
+<div class="font-title-md text-title-md text-on-surface">Dr. Ananya Sharma</div>
+<div class="font-label-sm text-label-sm text-secondary">DMC-49102 · Radiologist</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">Rajesh K. (48M)</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant">ABHA: 91-4829-1092-4819</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-medium text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Differential AI Review (Acute Dyspnea)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">key</span>
+                  ABHA OTP Verified
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">verified_user</span> DPDP Verified · Ledger #9942
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                  Audit Trace
+                </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono font-medium text-on-surface">14:18:51 IST</td>
+<td class="py-3.5 px-4">
+<div class="font-title-md text-title-md text-on-surface">Dr. Rajiv Menon</div>
+<div class="font-label-sm text-label-sm text-secondary">KMC-11029 · Intensivist</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">Pooja Nair (32F)</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant">ABHA: 24-9918-0012-7712</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-medium text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Emergency Overrule (ICU Septic Shock)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-error font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                  Section 9 Exemption
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-on-surface-variant font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">lock_clock</span> Witness Signed (CMO-31)
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                  Audit Trace
+                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono font-medium text-on-surface">13:58:12 IST</td>
+<td class="py-3.5 px-4">
+<div class="font-title-md text-title-md text-on-surface">Dr. Sneha Roy</div>
+<div class="font-label-sm text-label-sm text-secondary">WBMC-33910 · Pathologist</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">Aarav Patel (55M)</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant">ABHA: 88-1290-3490-5011</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-medium text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Histopathology Slide AI Co-pilot
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                  Direct Standing Consent
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">verified_user</span> DPDP Verified · Ledger #9939
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                  Audit Trace
+                </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-4 font-mono font-medium text-on-surface">13:41:09 IST</td>
+<td class="py-3.5 px-4">
+<div class="font-title-md text-title-md text-on-surface">Dr. Ananya Sharma</div>
+<div class="font-label-sm text-label-sm text-secondary">DMC-49102 · Radiologist</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-medium text-on-surface">Meenakshi Sundaram (61F)</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant">ABHA: 11-4820-5629-8830</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 font-medium text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  DICOM Multi-slice CT Thorax Inference
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">key</span>
+                  ABHA OTP Verified
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">verified_user</span> DPDP Verified · Ledger #9938
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                  Audit Trace
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 4: USER ROLE & PRACTITIONER CREDENTIAL MANAGEMENT -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg" id="credential-management">
+<!-- Left: Practitioner Registry List (8 cols) -->
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Credential Verification &amp; Licensing</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Medical Council Registry Verification</h2>
+</div>
+<span class="px-3 py-1 rounded-full bg-error-container text-error font-label-sm text-label-sm font-bold">
+            6 Pending Reviews
+          </span>
+</div>
+<div class="space-y-space-sm">
+<!-- Pending Practitioner 1 -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                VS
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-on-surface">Dr. Vikram Sethi</h4>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold">MBBS, MD (Pulm.)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Council Reg: <strong class="text-on-surface">KMC-88192</strong> · Karnataka Medical Council</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span> Pending ABHA Doctor ID Link
+                  </span>
+<span class="text-outline-variant">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Uploaded 3 hrs ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all">
+                Approve License
+              </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high text-error font-label-md text-label-md hover:bg-error-container transition-all">
+                Reject
+              </button>
+</div>
+</div>
+<!-- Pending Practitioner 2 -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                PR
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-on-surface">Dr. Preeti Ranganathan</h4>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold">MBBS, MS (General Surgery)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Council Reg: <strong class="text-on-surface">TNMC-55201</strong> · Tamil Nadu Medical Council</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Digital Signature Authenticated
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all">
+                Approve License
+              </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high text-error font-label-md text-label-md hover:bg-error-container transition-all">
+                Reject
+              </button>
+</div>
+</div>
+<!-- Verified Active 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold">
+                AS
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-on-surface">Dr. Ananya Sharma</h4>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">DMRD (Radiology)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reg: <strong class="text-on-surface">DMC-49102</strong> · Delhi Medical Council</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified Active (ABHA ID #91-DOC-9821)
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all">
+                Manage Permissions
+              </button>
+</div>
+</div>
+<!-- Verified Active 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold">
+                SR
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-on-surface">Dr. Sneha Roy</h4>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">MD (Pathology)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reg: <strong class="text-on-surface">WBMC-33910</strong> · West Bengal Medical Council</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified Active (ABHA ID #19-DOC-1244)
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all">
+                Manage Permissions
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Granular Permission Matrix Toggle (4 cols) -->
+<div class="xl:col-span-4 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Role-Based Access Control</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-0.5">Granular Capability Matrix</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Enforce hospital policies and CDSCO regulations across diagnostic capabilities.</p>
+<div class="mt-space-md space-y-space-sm">
+<!-- Toggle 1 -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Can View Raw DICOM</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Full-resolution uncompressed scans</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Can Override AI Risk Score</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Requires mandatory clinical reason note</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 3 -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Export Certified Med-Legal</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Affix doctor digital signature token</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 4 -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Can Access Genomic Data</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Targeted NGS panel variants</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-all shadow-sm">
+            Save Permissions Policy
+          </button>
+</div>
+</div>
+</section>
+</div>
+</div></main></div></body></html>
